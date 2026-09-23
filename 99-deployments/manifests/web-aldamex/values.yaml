@@ -34,7 +34,7 @@ wordpress:
     enabled: false
 
   externalDatabase:
-    host: web-aldamex-production-mysql
+    host: web-aldamex-main-mysql
     port: 3306
     database: wordpress
     user: root
