@@ -49,21 +49,7 @@ metadata:
     argocd.argoproj.io/secret-type: repository
 type: Opaque    
 stringData:
-  url: https://github.com/wintech-thai/please-payment-k3s-pjp2.git
-  username: ""
-  password: ""
-  type: git
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: git-remote-auth-secret-control
-  namespace: argocd
-  labels:
-    argocd.argoproj.io/secret-type: repository
-type: Opaque    
-stringData:
-  url: https://github.com/wintech-thai/please-payment-control-plane.git
+  url: https://github.com/wintech-thai/nap-k3s-server-001.git
   username: ""
   password: ""
   type: git
