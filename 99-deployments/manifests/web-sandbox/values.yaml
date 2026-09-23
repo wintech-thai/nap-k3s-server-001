@@ -13,9 +13,9 @@ wordpress:
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 50m
       kubernetes.io/ingress.allow-http: "true" #Wordpress will redirect to https internally  
-    ingressClassName: iap-nginx #ให้เข้ามาที่ ingress ตัวนี้แทน
+    ingressClassName: nginx #ให้เข้ามาที่ ingress ตัวนี้แทน
     enabled: true
-    hostname: temp.internal.napbiotec.io #Will chante to temp.internal.napbiotec.io
+    hostname: sandbox.napbiotec.io
     #extraHosts:
     #  - name: www.temp.internal.napbiotec.io
 
