@@ -23,6 +23,7 @@ wordpress:
     hostname: kratomcraft.com
     extraHosts:
       - name: www.kratomcraft.com
+      - name: kratom.wintech-thai.com
 
   service:
     type: ClusterIP

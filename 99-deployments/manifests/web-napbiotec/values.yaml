@@ -20,6 +20,7 @@ wordpress:
       - name: www.napbiotec.io
       - name: www.napbiotec.com
       - name: napbiotec.com
+      - name: napbiotec.wintech-thai.com
 
   service:
     type: ClusterIP

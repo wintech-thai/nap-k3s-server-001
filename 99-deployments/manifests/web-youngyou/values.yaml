@@ -23,6 +23,7 @@ wordpress:
     hostname: youngyoushop.com
     extraHosts:
       - name: www.youngyoushop.com
+      - name: youngyou.wintech-thai.com
 
   service:
     type: ClusterIP

@@ -16,8 +16,8 @@ wordpress:
     ingressClassName: nginx #ให้เข้ามาที่ ingress ตัวนี้แทน
     enabled: true
     hostname: sandbox.napbiotec.io
-    #extraHosts:
-    #  - name: www.temp.internal.napbiotec.io
+    extraHosts:
+      - name: sandbox.wintech-thai.com
 
   service:
     type: ClusterIP

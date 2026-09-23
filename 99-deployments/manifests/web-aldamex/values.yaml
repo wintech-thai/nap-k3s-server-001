@@ -26,6 +26,7 @@ wordpress:
       - name: www.aldamex.com
       - name: aldamexthailand.com
       - name: www.aldamexthailand.com
+      - name: aldamex.wintech-thai.com
 
   service:
     type: ClusterIP

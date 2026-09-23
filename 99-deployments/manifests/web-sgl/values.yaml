@@ -23,6 +23,7 @@ wordpress:
     extraHosts:
       - name: www.siamgreenlegend.com
       - name: sgl.wintech-thai.com
+      - name: sgl.wintech-thai.com
 
   service:
     type: ClusterIP
