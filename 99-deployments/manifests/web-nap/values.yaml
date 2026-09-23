@@ -22,6 +22,7 @@ wordpress:
     hostname: natureagroproduct.com
     extraHosts:
       - name: www.natureagroproduct.com
+      - name: nap.wintech-thai.com
 
   service:
     type: ClusterIP
