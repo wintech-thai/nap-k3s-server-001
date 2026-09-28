@@ -1,0 +1,17 @@
+domain1: snipeit.wintech-thai.com
+domain2: snipeit.napbiotec.com
+
+snipeit:
+  enabled: true
+  config:
+    snipeit:
+      url: https://snipeit.wintech-thai.com
+      key: base64:uxA0D1SdxZJ5afqbNadLOoPkVzjdmSgneILipsFfclI=
+      envConfig:
+        MYSQL_DATABASE: db-snipteit
+        MYSQL_PORT_3306_TCP_ADDR: mysql
+        MYSQL_PORT_3306_TCP_PORT: "3306"
+    externalSecrets:
+      - snipeit-secret
+  ingress:
+    enabled: false
