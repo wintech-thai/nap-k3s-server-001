@@ -7,8 +7,8 @@ snipeit:
     snipeit:
       url: https://snipeit.wintech-thai.com
       #key: base64:uxA0D1SdxZJ5afqbNadLOoPkVzjdmSgneILipsFfclI=
-    externalSecrets:
-      - snipeit-secret
+    #externalSecrets:
+    #  - snipeit-secret
 
   ingress:
     enabled: false
