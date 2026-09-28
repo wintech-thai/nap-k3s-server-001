@@ -7,6 +7,6 @@ appVersion: "1.0"
 
 dependencies:
   - name: snipeit
-    version: "3.4.1"
+    version: "3.4.0"
     repository: "https://storage.googleapis.com/t3n-helm-charts"
     condition: snipeit.enabled
