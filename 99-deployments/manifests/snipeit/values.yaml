@@ -6,7 +6,7 @@ snipeit:
   config:
     snipeit:
       url: https://snipeit.wintech-thai.com
-    externalSecrets: "snipeit-secret"
+      key: base64:uxA0D1SdxZJ5afqbNadLOoPkVzjdmSgneILipsFfclI=
 
   mysql:
     enabled: true
