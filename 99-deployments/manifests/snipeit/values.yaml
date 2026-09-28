@@ -9,7 +9,7 @@ snipeit:
       key: base64:uxA0D1SdxZJ5afqbNadLOoPkVzjdmSgneILipsFfclI=
       envConfig:
         MYSQL_DATABASE: db-snipteit
-        MYSQL_PORT_3306_TCP_ADDR: mysql
+        MYSQL_PORT_3306_TCP_ADDR: snipeit-main-mysql
         MYSQL_PORT_3306_TCP_PORT: "3306"
     externalSecrets:
       - snipeit-secret
