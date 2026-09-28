@@ -29,6 +29,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: snipeit-production
+                name: snipeit-main
                 port:
                   number: 80
