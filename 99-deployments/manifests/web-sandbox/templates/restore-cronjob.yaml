@@ -4,7 +4,6 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: {{ .Values.backupRestore.namePrefix }}-restore
-  namespace: {{ .Values.backupRestore.app.namespace }}
 spec:
   # Run on demand for testing: kubectl create job --from=cronjob/{{ .Values.backupRestore.namePrefix }}-restore {{ .Values.backupRestore.namePrefix }}-restore-manual -n {{ .Values.backupRestore.app.namespace }}
   # Kept suspended by default — this is meant to run daily only on the NEW
