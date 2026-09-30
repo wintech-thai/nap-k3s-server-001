@@ -62,6 +62,7 @@ backupRestore:
   enabled: true
   namePrefix: napbiotec
   timeZone: "Asia/Bangkok"
+  s3TransferTimeoutSec: 3600
 
   backupSchedule: "0 19 * * *"
   restoreSchedule: "30 6 * * *"

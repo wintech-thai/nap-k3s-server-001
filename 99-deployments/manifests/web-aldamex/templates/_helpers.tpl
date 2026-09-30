@@ -26,6 +26,8 @@ include it) can be copied as-is.
   value: "{{ .Values.backupRestore.storage.bucketPath }}"
 - name: FILE_PREFIX
   value: "{{ .Values.backupRestore.storage.filePrefix }}"
+- name: S3_TRANSFER_TIMEOUT_SEC
+  value: "{{ .Values.backupRestore.s3TransferTimeoutSec | default 1800 }}"
 - name: S3_KEY
   valueFrom:
     secretKeyRef:
