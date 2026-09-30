@@ -53,6 +53,7 @@ onixJobs:
 backupRestore:
   enabled: true
   namePrefix: sandbox
+  timeZone: "Asia/Bangkok"
 
   backupSchedule: "0 19 * * *"    # daily 19:00
   restoreSchedule: "30 19 * * *"  # 30 min after backup, daily 19:30
