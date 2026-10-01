@@ -21,7 +21,7 @@ snipeit:
 # then swap to a stable vX.Y.Z tag once confirmed working (see
 # feedback_onix_jobs_develop_tag_no_release_needed in project memory).
 onixJobs:
-  imageTag: develop-245d070
+  imageTag: develop-28f7fb8
 
 # Backup/restore for SnipeIT itself — unlike the WordPress sites this isn't a
 # migration (SnipeIT already lives here on-prem), so backup runs daily as
