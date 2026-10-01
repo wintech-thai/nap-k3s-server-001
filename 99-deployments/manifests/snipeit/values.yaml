@@ -5,7 +5,7 @@ snipeit:
   enabled: true
   config:
     snipeit:
-      url: https://snipeit.wintech-thai.com
+      url: https://snipeit.napbiotec.com
       key: base64:uxA0D1SdxZJ5afqbNadLOoPkVzjdmSgneILipsFfclI=
 
   mysql:
