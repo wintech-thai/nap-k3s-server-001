@@ -1,9 +1,7 @@
 {{/*
 Shared env vars for the app-backup.rb / app-restore.rb CronJobs — defined
 once here so backup-cronjob.yaml and restore-cronjob.yaml stay in sync.
-Copying this whole chart folder to back up a different WordPress instance
-only needs values.yaml edited; this template (and the two cronjobs that
-include it) can be copied as-is.
+Same pattern as the WordPress sites' _helpers.tpl (see web-sandbox etc.).
 */}}
 {{- define "backupRestore.env" -}}
 - name: DB_TYPE
@@ -11,13 +9,13 @@ include it) can be copied as-is.
 - name: DB_NAMESPACE
   value: "{{ .Values.backupRestore.db.namespace }}"
 - name: DB_POD_NAME
-  value: "{{ .Values.backupRestore.db.podName }}"
+  value: "{{ .Values.backupRestore.db.podName | default "" }}"
 - name: DB_POD_LABEL
   value: "{{ .Values.backupRestore.db.podLabel | default "" }}"
 - name: APP_NAMESPACE
   value: "{{ .Values.backupRestore.app.namespace }}"
 - name: APP_POD_KEYWORD
-  value: "{{ .Values.backupRestore.app.podKeyword }}"
+  value: "{{ .Values.backupRestore.app.podKeyword | default "" }}"
 - name: APP_POD_LABEL
   value: "{{ .Values.backupRestore.app.podLabel | default "" }}"
 - name: APP_DATA_PATH

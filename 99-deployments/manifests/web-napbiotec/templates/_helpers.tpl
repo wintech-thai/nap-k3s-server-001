@@ -12,10 +12,14 @@ include it) can be copied as-is.
   value: "{{ .Values.backupRestore.db.namespace }}"
 - name: DB_POD_NAME
   value: "{{ .Values.backupRestore.db.podName }}"
+- name: DB_POD_LABEL
+  value: "{{ .Values.backupRestore.db.podLabel | default "" }}"
 - name: APP_NAMESPACE
   value: "{{ .Values.backupRestore.app.namespace }}"
 - name: APP_POD_KEYWORD
   value: "{{ .Values.backupRestore.app.podKeyword }}"
+- name: APP_POD_LABEL
+  value: "{{ .Values.backupRestore.app.podLabel | default "" }}"
 - name: APP_DATA_PATH
   value: "{{ .Values.backupRestore.app.dataPath }}"
 - name: S3_STORAGE_URL
