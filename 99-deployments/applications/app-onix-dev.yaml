@@ -27,6 +27,8 @@ spec:
             - values/onix-legacy-api/onix-legacy-api-03-dev-image-tag.yaml
 
             - values/postgresql/postgresql-00-values.yaml
+
+            - values/postgresql-aip/postgresql-00-values.yaml
       destination:
         name: in-cluster
         namespace: onix-dev
