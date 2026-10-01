@@ -41,6 +41,15 @@ wordpress:
     user: root
     existingSecret: wordpress-db-login
 
+  # WORKAROUND: see web-nap/values.yaml for why this is needed — chart
+  # doesn't populate WORDPRESS_DATABASE_HOST/PORT from externalDatabase.*,
+  # causing CrashLoopBackOff on every pod restart. Applied to all 7 WP sites.
+  extraEnvVars:
+    - name: WORDPRESS_DATABASE_HOST
+      value: web-aldamex-main-mysql
+    - name: WORDPRESS_DATABASE_PORT_NUMBER
+      value: "3306"
+
 mysql:
   enabled: true
   image:

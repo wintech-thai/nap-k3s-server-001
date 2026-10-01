@@ -37,6 +37,20 @@ wordpress:
     user: root
     existingSecret: wordpress-db-login
 
+  # WORKAROUND: this chart version doesn't actually populate
+  # WORDPRESS_DATABASE_HOST/PORT from externalDatabase.* above (the
+  # container keeps getting MARIADB_HOST instead, which the entrypoint's
+  # wordpress_wait_for_mysql_connection doesn't read) — causes a 60s DB
+  # connect timeout + CrashLoopBackOff on every pod restart. Found 2026-10-01
+  # debugging web-kratomcraft's crash after its restore-triggered pod
+  # restart; applied to all 7 WP sites since they share this same config
+  # pattern. Set the vars explicitly until the chart issue is understood.
+  extraEnvVars:
+    - name: WORDPRESS_DATABASE_HOST
+      value: web-nap-main-mysql
+    - name: WORDPRESS_DATABASE_PORT_NUMBER
+      value: "3306"
+
 mysql:
   enabled: true
   image:
