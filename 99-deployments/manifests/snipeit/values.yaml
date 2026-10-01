@@ -35,7 +35,7 @@ backupRestore:
   backupSchedule: "0 2 * * *"
   restoreSchedule: "30 7 * * *"
   suspendBackup: false
-  suspendRestore: false
+  suspendRestore: true
   restartAppPodAfterRestore: "true"
   s3TransferTimeoutSec: 3600
 
