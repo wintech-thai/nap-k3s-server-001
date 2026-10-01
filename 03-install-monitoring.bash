@@ -31,7 +31,7 @@ for i in 1 2; do
 
   helm template kube-prometheus-crds \
     prometheus-community/kube-prometheus-stack \
-    --version 76.4.0 \
+    --version 80.14.0 \
     --include-crds \
     --namespace monitoring \
     -f prometheus-values.yaml \
