@@ -78,7 +78,7 @@ backupRestore:
 
   backupSchedule: "0 21 * * *"
   restoreSchedule: "30 6 * * *"
-  suspendBackup: false
+  suspendBackup: true
   suspendRestore: true
   restartAppPodAfterRestore: "true"
 
