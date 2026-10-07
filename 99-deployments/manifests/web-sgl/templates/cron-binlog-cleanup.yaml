@@ -4,6 +4,7 @@ metadata:
   name: mysql-binlog-cleanup
 spec:
   schedule: "0 4 * * *"
+  timeZone: "Asia/Bangkok"
   concurrencyPolicy: Forbid
 
   successfulJobsHistoryLimit: 1
