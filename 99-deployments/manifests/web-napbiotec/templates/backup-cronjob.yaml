@@ -15,7 +15,8 @@ spec:
       template:
         spec:
           serviceAccountName: {{ .Values.backupRestore.namePrefix }}-backup-sa
-          restartPolicy: OnFailure
+          restartPolicy: Never
+          backoffLimit: 0
           containers:
             - name: app-backup
               image: "pjamenaja/onix-v2-jobs:{{ .Values.onixJobs.imageTag }}"
