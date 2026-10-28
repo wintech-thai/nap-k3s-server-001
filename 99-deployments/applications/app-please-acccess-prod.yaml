@@ -1,0 +1,61 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: please-access-prod
+  namespace: argocd
+spec:
+  generators:
+  - clusters:
+      selector:
+        matchLabels:
+          custom: "true"
+  template:
+    metadata:
+      name: 'bootstrap-please-access-prod'
+    spec:
+      project: "default"
+      source:
+        repoURL: https://github.com/wintech-thai/please-access-control-plane.git
+        targetRevision: "production" #Based on environment
+        path: '.'
+        helm:
+          releaseName: please-access-prod
+          ignoreMissingValueFiles: true
+          valueFiles:
+            - values-files/values-production.yaml
+
+            # redis
+            - values-files/redis/redis-00-values.yaml
+
+            # postgresql
+            - values-files/postgresql/postgresql-00-values.yaml
+
+            # please-access-admin
+            - values-files/please-access-admin/please-access-admin-00-values.yaml
+            - values-files/please-access-admin/please-access-admin-01-production-values.yaml
+            - values-files/please-access-admin/please-access-admin-03-production-image-tag.yaml
+
+            # please-access-tenant
+            - values-files/please-access-tenant/please-access-tenant-00-values.yaml
+            - values-files/please-access-tenant/please-access-tenant-01-production-values.yaml
+            - values-files/please-access-tenant/please-access-tenant-03-production-image-tag.yaml
+
+            # onix-jobs
+            - values-files/onix-jobs/onix-jobs-00-values.yaml
+            - values-files/onix-jobs/onix-jobs-01-production-values.yaml
+            - values-files/onix-jobs/onix-jobs-03-production-image-tag.yaml
+
+            # onix-api
+            - values-files/onix-api/onix-api-00-values.yaml
+            - values-files/onix-api/onix-api-01-production-values.yaml
+            - values-files/onix-api/onix-api-03-production-image-tag.yaml
+
+      destination:
+        name: in-cluster
+        namespace: please-access-production
+      syncPolicy:
+        automated:
+          selfHeal: true
+          prune: true
+        syncOptions:
+          - CreateNamespace=true
