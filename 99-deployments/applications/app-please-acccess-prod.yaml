@@ -11,7 +11,7 @@ spec:
           custom: "true"
   template:
     metadata:
-      name: 'bootstrap-please-access-prod'
+      name: 'please-access-prod'
     spec:
       project: "default"
       source:
